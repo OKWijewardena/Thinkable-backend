@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "purchase_date": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "user": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    }
+  }
+}

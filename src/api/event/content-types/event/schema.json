@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "location": {
+      "type": "text"
+    },
+    "ticket_price": {
+      "type": "decimal"
+    },
+    "seat_capacity": {
+      "type": "integer"
+    },
+    "seat_availability": {
+      "type": "integer"
+    },
+    "is_premium": {
+      "type": "boolean"
+    },
+    "is_live_stream": {
+      "type": "boolean"
+    },
+    "event_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "user_events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-event.user-event",
+      "mappedBy": "event"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "event"
+    },
+    "live_streams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::live-stream.live-stream",
+      "mappedBy": "event"
+    },
+    "commissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::commission.commission",
+      "mappedBy": "event"
+    },
+    "analytics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::analytic.analytic",
+      "mappedBy": "event"
+    },
+    "description": {
+      "type": "text"
+    },
+    "category_id": {
+      "type": "string"
+    },
+    "organiser_id": {
+      "type": "string"
+    }
+  }
+}

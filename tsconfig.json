@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",                // Maintains Node.js compatibility
+    "moduleResolution": "Node",         // Node.js module resolution
+    "lib": ["ES2020", "DOM"],           // Adds DOM for browser compatibility
+    "target": "ES2019",                 // Targets modern JS without breaking legacy environments
+    "jsx": "react-jsx",                 // Enables JSX support for React
+    "strict": false,                    // Relax strict type checks (set to true for better type safety)
+    "skipLibCheck": true,               // Skips type checks for dependencies
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,                // Speeds up builds with incremental compilation
+    "esModuleInterop": true,            // Handles interop between CommonJS and ES modules
+    "resolveJsonModule": true,          // Allows importing JSON files
+    "noEmitOnError": true,              // Prevents emitting files on build errors
+    "noImplicitThis": true,             // Enforces proper `this` usage
+    "outDir": "dist",                   // Output directory for compiled files
+    "rootDir": ".",                     // Specifies the root directory
+    "allowSyntheticDefaultImports": true // Enables default imports for modules
+  },
+  "include": [
+    "./",                                // Include root files
+    "./**/*.ts",                         // Include all TypeScript files
+    "./**/*.tsx",                        // Include all TSX files (for React)
+    "./**/*.js",                         // Include all JavaScript files
+    "./**/*.json"                        // Include all JSON files
+  ],
+  "exclude": [
+    "node_modules/",                     // Exclude node_modules
+    "build/",                            // Exclude build folder
+    "dist/",                             // Exclude dist folder
+    ".cache/",                           // Exclude cache folder
+    ".tmp/",                             // Exclude temporary files
+    "src/admin/",                        // Exclude admin files from server compilation
+    "**/*.test.*",                       // Exclude test files
+    "src/plugins/**"                     // Exclude plugin files from server compilation
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hosts",
+  "info": {
+    "singularName": "host",
+    "pluralName": "hosts",
+    "displayName": "Host",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "contact_info": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "user": {
+      "type": "string"
+    },
+    "permission": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

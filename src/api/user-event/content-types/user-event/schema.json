@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_events",
+  "info": {
+    "singularName": "user-event",
+    "pluralName": "user-events",
+    "displayName": "User Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_events"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "user_events"
+    },
+    "event_status": {
+      "type": "enumeration",
+      "enum": [
+        "saved",
+        "attended",
+        "reserved"
+      ]
+    }
+  }
+}
