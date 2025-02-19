@@ -53,12 +53,6 @@
       "target": "api::user-event.user-event",
       "mappedBy": "event"
     },
-    "messages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::message.message",
-      "mappedBy": "event"
-    },
     "live_streams": {
       "type": "relation",
       "relation": "oneToMany",
@@ -84,6 +78,9 @@
       "type": "string"
     },
     "organiser_id": {
+      "type": "string"
+    },
+    "user": {
       "type": "string"
     }
   }

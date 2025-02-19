@@ -11,29 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "sender": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "messages"
+    "user": {
+      "type": "string"
     },
-    "receiver": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "messages"
+    "name": {
+      "type": "string"
     },
-    "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "inversedBy": "messages"
+    "contact_number": {
+      "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
-    "timestamp": {
-      "type": "datetime"
+    "message": {
+      "type": "text"
     }
   }
 }

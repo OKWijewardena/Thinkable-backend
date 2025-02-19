@@ -71,12 +71,6 @@
       "target": "api::user-event.user-event",
       "mappedBy": "user"
     },
-    "messages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::message.message",
-      "mappedBy": "receiver"
-    },
     "analytics": {
       "type": "relation",
       "relation": "oneToMany",
