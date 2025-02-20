@@ -47,12 +47,6 @@
         "audios"
       ]
     },
-    "user_events": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::user-event.user-event",
-      "mappedBy": "event"
-    },
     "live_streams": {
       "type": "relation",
       "relation": "oneToMany",

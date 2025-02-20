@@ -510,10 +510,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     user: Schema.Attribute.String;
-    user_events: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::user-event.user-event'
-    >;
   };
 }
 
@@ -783,6 +779,7 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
 export interface ApiUserEventUserEvent extends Struct.CollectionTypeSchema {
   collectionName: 'user_events';
   info: {
+    description: '';
     displayName: 'User Event';
     pluralName: 'user-events';
     singularName: 'user-event';
@@ -794,10 +791,10 @@ export interface ApiUserEventUserEvent extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    event: Schema.Attribute.Relation<'manyToOne', 'api::event.event'>;
-    event_status: Schema.Attribute.Enumeration<
-      ['saved', 'attended', 'reserved']
-    >;
+    event: Schema.Attribute.String;
+    event_description: Schema.Attribute.String;
+    event_name: Schema.Attribute.String;
+    event_status: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -808,10 +805,7 @@ export interface ApiUserEventUserEvent extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<
-      'manyToOne',
-      'plugin::users-permissions.user'
-    >;
+    user: Schema.Attribute.String;
   };
 }
 
@@ -1306,10 +1300,6 @@ export interface PluginUsersPermissionsUser
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user_events: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::user-event.user-event'
-    >;
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

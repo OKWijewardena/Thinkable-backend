@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-event",
     "pluralName": "user-events",
-    "displayName": "User Event"
+    "displayName": "User Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,24 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "user_events"
+      "type": "string"
     },
     "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "inversedBy": "user_events"
+      "type": "string"
     },
     "event_status": {
-      "type": "enumeration",
-      "enum": [
-        "saved",
-        "attended",
-        "reserved"
-      ]
+      "type": "string"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "event_description": {
+      "type": "string"
     }
   }
 }
