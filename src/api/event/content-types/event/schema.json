@@ -76,6 +76,24 @@
     },
     "user": {
       "type": "string"
+    },
+    "vip_seats": {
+      "type": "string"
+    },
+    "standed_seats": {
+      "type": "string"
+    },
+    "ticket_type": {
+      "type": "string"
+    },
+    "vip_ticket_price": {
+      "type": "string"
+    },
+    "standed_ticket_price": {
+      "type": "string"
+    },
+    "time": {
+      "type": "time"
     }
   }
 }
