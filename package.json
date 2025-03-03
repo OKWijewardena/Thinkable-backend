@@ -18,6 +18,7 @@
     "@strapi/icons": "^1.19.0",
     "@strapi/plugin-cloud": "5.5.0",
     "@strapi/plugin-users-permissions": "^5.5.0",
+    "@strapi/provider-email-sendgrid": "^5.10.4",
     "@strapi/strapi": "5.5.0",
     "@vitejs/plugin-react": "^4.3.4",
     "better-sqlite3": "11.3.0",

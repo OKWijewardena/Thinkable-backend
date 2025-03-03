@@ -77,12 +77,6 @@
     "user": {
       "type": "string"
     },
-    "vip_seats": {
-      "type": "string"
-    },
-    "standed_seats": {
-      "type": "string"
-    },
     "ticket_type": {
       "type": "string"
     },
@@ -94,6 +88,12 @@
     },
     "time": {
       "type": "time"
+    },
+    "vip_seats": {
+      "type": "integer"
+    },
+    "standed_seats": {
+      "type": "integer"
     }
   }
 }

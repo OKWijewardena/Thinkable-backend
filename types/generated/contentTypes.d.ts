@@ -504,7 +504,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seat_availability: Schema.Attribute.Integer;
     seat_capacity: Schema.Attribute.Integer;
-    standed_seats: Schema.Attribute.String;
+    standed_seats: Schema.Attribute.Integer;
     standed_ticket_price: Schema.Attribute.String;
     ticket_price: Schema.Attribute.Decimal;
     ticket_type: Schema.Attribute.String;
@@ -514,7 +514,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     user: Schema.Attribute.String;
-    vip_seats: Schema.Attribute.String;
+    vip_seats: Schema.Attribute.Integer;
     vip_ticket_price: Schema.Attribute.String;
   };
 }
